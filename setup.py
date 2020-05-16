@@ -96,7 +96,11 @@ setup(
     install_requires=requirements,
     python_requires=f'>={MIN_PY_VER}',
     packages=find_packages(),
-    entry_points={'console_scripts': ['napari=napari.__main__:main']},
+    package_data={"": ['napari.ico', 'desktop-app.json']},
+    entry_points={
+        'console_scripts': ['napari=desktop_app:entry_point'],
+        'gui_scripts': ['napari-gui=desktop_app:entry_point'],
+    },
     include_package_data=True,
     zip_safe=False,  # the package can run out of an .egg file
 )

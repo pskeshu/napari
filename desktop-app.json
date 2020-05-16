@@ -1,0 +1,4 @@
+{
+    "product_name": "napari",
+    "modules": {"napari": {"display_name": "napari"}}
+}

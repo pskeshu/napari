@@ -8,9 +8,13 @@ from ast import literal_eval
 from textwrap import wrap
 from typing import Any, Dict, List
 
-from . import __version__, gui_qt, layers, view_path
-from .components.add_layers_mixin import valid_add_kwargs
-from .utils import citation_text, sys_info
+from napari import __version__, gui_qt, layers, view_path
+from napari.components.add_layers_mixin import valid_add_kwargs
+from napari.utils import citation_text, sys_info
+
+import desktop_app
+
+desktop_app.set_process_appid("napari")
 
 
 class InfoAction(argparse.Action):
